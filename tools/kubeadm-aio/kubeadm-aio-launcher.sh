@@ -21,18 +21,18 @@ sudo mount --bind /var/lib/kubelet /var/lib/kubelet
 sudo mount --make-shared /var/lib/kubelet
 
 # Cleanup any old deployment
-sudo docker rm -f kubeadm-aio || true
-sudo docker rm -f kubelet || true
-sudo docker ps -aq | xargs -l1 sudo docker rm -f || true
-sudo rm -rfv \
-    /etc/cni/net.d \
-    /etc/kubernetes \
-    /var/lib/etcd \
-    /var/etcd \
-    /var/lib/kubelet/* \
-    /run/openvswitch \
-    ${HOME}/.kubeadm-aio/admin.conf \
-    /var/lib/nfs-provisioner || true
+#sudo docker rm -f kubeadm-aio || true
+#sudo docker rm -f kubelet || true
+#sudo docker ps -aq | xargs -l1 sudo docker rm -f || true
+#sudo rm -rfv \
+#    /etc/cni/net.d \
+#    /etc/kubernetes \
+#    /var/lib/etcd \
+#    /var/etcd \
+#    /var/lib/kubelet/* \
+#    /run/openvswitch \
+#    ${HOME}/.kubeadm-aio/admin.conf \
+#    /var/lib/nfs-provisioner || true
 
 # Launch Container
 sudo docker run \
